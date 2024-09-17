@@ -32,7 +32,7 @@ model Bus{
     id        Int      @id @default(autoincrement())
 model String
 name String
-busDtiver String
+busDriver String
  createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 }
