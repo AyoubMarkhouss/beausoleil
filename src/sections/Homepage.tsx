@@ -25,10 +25,10 @@ const Homepage = () => {
   };
 
   return (
-    <div>
+    <div className="mb-20">
       <Navigationbar />
       <div className="flex h-96 w-full items-center justify-center">
-        <h1 className="cabinet text-center absolute text-4xl md:text-5xl lg:text-6xl text-white">
+        <h1 className="cabinet absolute text-center text-4xl text-white md:text-5xl lg:text-6xl">
           Find cheap tickets for your next trip
         </h1>
         <Image
@@ -39,8 +39,8 @@ const Homepage = () => {
           className="h-full object-cover"
         />
       </div>
-      <div className="-mt-20 md:-mt-20 lg:-mt-10 px-5 md:px-10 lg:px-20">
-        <div className="grid grid-cols-2 lg:grid-cols-5 shadow-xl">
+      <div className="-mt-20 px-5 md:-mt-20 md:px-10 lg:-mt-10 lg:px-20">
+        <div className="grid grid-cols-2 shadow-xl lg:grid-cols-5">
           <div className="flex h-24 w-full items-center border-r bg-white">
             <ComboboxDemo1 />
           </div>
@@ -54,25 +54,26 @@ const Homepage = () => {
             <DatePickerDemo />
           </div>
           <div className="flex h-24 w-full items-center justify-evenly bg-white">
-            <IoPersonOutline size={20} color="gray" />
+            <IoPersonOutline size={20} className="stroke-bigtitle" />
 
             <div className="flex items-center space-x-2">
               <button
-                className="hidden md:flex rounded-l bg-gray-300 px-4 py-2 font-bold text-bigtitle hover:bg-gray-400"
+                className="hidden rounded-l bg-gray-300 px-4 py-2 font-bold text-bigtitle hover:bg-gray-400 md:flex"
                 onClick={decrementPassengers}
               >
                 -
               </button>
               <input
                 type="number"
-                className="w-20 md:w-20 border border-gray-300 py-2 text-center"
+                className="w-20 border border-gray-300 py-2 text-center md:w-20"
                 value={passengers}
                 onChange={(e) => setPassengers(Number(e.target.value))}
                 placeholder="Number of passengers"
-                min="1"
+                min="0"
+                required
               />
               <button
-                className="hidden md:flex rounded-r bg-gray-300 px-4 py-2 font-bold text-bigtitle hover:bg-gray-400"
+                className="hidden rounded-r bg-gray-300 px-4 py-2 font-bold text-bigtitle hover:bg-gray-400 md:flex"
                 onClick={incrementPassengers}
               >
                 +
@@ -80,7 +81,7 @@ const Homepage = () => {
             </div>
           </div>
 
-          <Button className="cabinet col-span-2 lg:col-span-1 flex h-24 w-full items-center justify-center bg-bigtitle text-lg text-white hover:bg-textblue">
+          <Button className="cabinet col-span-2 flex h-24 w-full items-center justify-center bg-bigtitle text-lg text-white hover:bg-textblue lg:col-span-1">
             <FaSearch size={20} className="mr-5" />
             Search
           </Button>

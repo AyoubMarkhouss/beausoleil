@@ -41,6 +41,15 @@ const frameworks = [
     value: "Essaouira",
     label: "Essaouira",
   },
+
+  {
+    value: "Tanger",
+    label: "Tanger",
+  },
+  {
+    value: "Fes",
+    label: "Fes",
+  },
 ];
 
 export function ComboboxDemo1() {
@@ -50,25 +59,32 @@ export function ComboboxDemo1() {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button role="combobox" aria-expanded={open} className="w-full text-gray-400 flex justify-evenly">
-          <MdOutlinePlace size={23} color="gray" />
+        <Button
+          role="combobox"
+          aria-expanded={open}
+          className="flex w-full justify-evenly"
+        >
+          {value ? (
+            <MdOutlinePlace size={23} className="fill-bigtitle" />
+          ) : (
+            <MdOutlinePlace size={23} color="gray" />
+          )}
+
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
             : "Your location"}
           {/* <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" /> */}
         </Button>
       </PopoverTrigger>
-      <PopoverContent
-        side="bottom"
-        className="w-[250px] rounded-lg bg-white p-0"
-      >
+      <PopoverContent side="bottom" className="w-[270px] bg-white p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
+          <CommandInput placeholder="Search places.." />
           <CommandList>
             <CommandEmpty>No framework found.</CommandEmpty>
             <CommandGroup>
               {frameworks.map((framework) => (
                 <CommandItem
+                  className="cursor-pointer border-b py-4"
                   key={framework.value}
                   value={framework.value}
                   onSelect={(currentValue) => {
@@ -78,10 +94,11 @@ export function ComboboxDemo1() {
                 >
                   <Check
                     className={cn(
-                      "mr-2 h-4 w-4",
+                      "mr-2 h-4 w-4 stroke-bigtitle",
                       value === framework.value ? "opacity-100" : "opacity-0",
                     )}
                   />
+                  <MdOutlinePlace size={23} className="fill-bigtitle mr-3" />
                   {framework.label}
                 </CommandItem>
               ))}

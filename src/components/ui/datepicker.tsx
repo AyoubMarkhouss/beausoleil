@@ -20,17 +20,21 @@ export function DatePickerDemo() {
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          
           className={cn(
-            "w-[280px] justify-evenly text-left font-normal ",
+            "w-[280px] justify-evenly text-left font-normal",
             !date && "text-muted-foreground",
           )}
         >
-          <CalendarIcon  size={20} color="gray"/>
-          {date ? format(date, "PPP") : <span className="text-gray-400">Pick a date</span>}
+          {date ? (
+            <CalendarIcon size={20} className="stroke-bigtitle" />
+          ) : (
+            <CalendarIcon size={20} color="gray" />
+          )}
+
+          {date ? format(date, "PPP") : <span className="">Pick a date</span>}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0 bg-white">
+      <PopoverContent className="w-auto bg-white p-0">
         <Calendar
           mode="single"
           selected={date}

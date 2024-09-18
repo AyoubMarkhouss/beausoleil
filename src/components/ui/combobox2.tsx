@@ -41,6 +41,15 @@ const frameworks = [
     value: "Essaouira",
     label: "Essaouira",
   },
+
+  {
+    value: "Tanger",
+    label: "Tanger",
+  },
+  {
+    value: "Fes",
+    label: "Fes",
+  },
 ];
 
 export function ComboboxDemo2() {
@@ -53,26 +62,29 @@ export function ComboboxDemo2() {
         <Button
           role="combobox"
           aria-expanded={open}
-          className="flex w-full justify-evenly text-gray-400"
+          className="flex w-full justify-evenly"
         >
-          <MdOutlinePlace size={23} color="gray"/>
+          {value ? (
+            <MdOutlinePlace size={23} className="fill-bigtitle" />
+          ) : (
+            <MdOutlinePlace size={23} color="gray" />
+          )}
+
           {value
             ? frameworks.find((framework) => framework.value === value)?.label
-            : "Your destination"}
+            : "Your location"}
           {/* <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" /> */}
         </Button>
       </PopoverTrigger>
-      <PopoverContent
-        side="bottom"
-        className="w-[250px] rounded-lg bg-white p-0"
-      >
+      <PopoverContent side="bottom" className="w-[270px] bg-white p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
+          <CommandInput placeholder="Search places.." />
           <CommandList>
             <CommandEmpty>No framework found.</CommandEmpty>
             <CommandGroup>
               {frameworks.map((framework) => (
                 <CommandItem
+                  className="cursor-pointer border-b py-4"
                   key={framework.value}
                   value={framework.value}
                   onSelect={(currentValue) => {
@@ -82,10 +94,11 @@ export function ComboboxDemo2() {
                 >
                   <Check
                     className={cn(
-                      "mr-2 h-4 w-4",
+                      "mr-2 h-4 w-4 stroke-bigtitle",
                       value === framework.value ? "opacity-100" : "opacity-0",
                     )}
                   />
+                  <MdOutlinePlace size={23} className="mr-3 fill-bigtitle" />
                   {framework.label}
                 </CommandItem>
               ))}

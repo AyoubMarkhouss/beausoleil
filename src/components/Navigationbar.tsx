@@ -10,7 +10,7 @@ const Navigationbar = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
   return (
-    <div>
+    <div className="">
       <div className="flex justify-between px-10 py-4 text-white lg:px-20">
         <div className="flex items-center justify-center">
           <FaBus className="fill-bigtitle" size={25} />

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { api } from "@/utils/api";
 import Homepage from "@/sections/Homepage";
+import Places from "@/sections/Places";
 
 export default function Home() {
   const hello = api.post.hello.useQuery({ text: "from tRPC" });
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Homepage />
+      <Places/>
     </>
   );
 }
