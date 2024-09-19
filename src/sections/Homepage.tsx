@@ -54,7 +54,7 @@ const Homepage = () => {
             <DatePickerDemo />
           </div>
           <div className="flex h-24 w-full items-center justify-evenly bg-white">
-            <IoPersonOutline size={20} className="stroke-bigtitle" />
+            <IoPersonOutline size={20} className="stroke-orangeboom" />
 
             <div className="flex items-center space-x-2">
               <button
@@ -81,8 +81,8 @@ const Homepage = () => {
             </div>
           </div>
 
-          <Button className="cabinet col-span-2 flex h-24 w-full items-center justify-center bg-bigtitle text-lg text-white hover:bg-textblue lg:col-span-1">
-            <FaSearch size={20} className="mr-5" />
+          <Button className="cabinet group col-span-2 flex h-24 w-full items-center justify-center bg-bigtitle text-lg text-white hover:bg-textblue lg:col-span-1">
+            <FaSearch size={20} className="mr-5 group-hover:fill-orangeboom" />
             Search
           </Button>
         </div>

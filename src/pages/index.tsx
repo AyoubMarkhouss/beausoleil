@@ -3,6 +3,8 @@ import Link from "next/link";
 import { api } from "@/utils/api";
 import Homepage from "@/sections/Homepage";
 import Places from "@/sections/Places";
+import { Footer } from "@/components/Footer";
+import { Aboutus } from "@/sections/Aboutus";
 
 export default function Home() {
   const hello = api.post.hello.useQuery({ text: "from tRPC" });
@@ -16,6 +18,8 @@ export default function Home() {
       </Head>
       <Homepage />
       <Places/>
+      <Aboutus/> 
+      <Footer/>
     </>
   );
 }

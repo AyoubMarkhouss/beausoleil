@@ -65,7 +65,7 @@ export function ComboboxDemo1() {
           className="flex w-full justify-evenly"
         >
           {value ? (
-            <MdOutlinePlace size={23} className="fill-bigtitle" />
+            <MdOutlinePlace size={23} className="fill-orangeboom" />
           ) : (
             <MdOutlinePlace size={23} color="gray" />
           )}
@@ -98,7 +98,7 @@ export function ComboboxDemo1() {
                       value === framework.value ? "opacity-100" : "opacity-0",
                     )}
                   />
-                  <MdOutlinePlace size={23} className="fill-bigtitle mr-3" />
+                  <MdOutlinePlace size={23} className="mr-3 fill-bigtitle" />
                   {framework.label}
                 </CommandItem>
               ))}

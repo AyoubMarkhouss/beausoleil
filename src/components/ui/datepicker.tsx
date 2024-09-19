@@ -26,7 +26,7 @@ export function DatePickerDemo() {
           )}
         >
           {date ? (
-            <CalendarIcon size={20} className="stroke-bigtitle" />
+            <CalendarIcon size={20} className="stroke-orangeboom" />
           ) : (
             <CalendarIcon size={20} color="gray" />
           )}

@@ -65,7 +65,7 @@ export function ComboboxDemo2() {
           className="flex w-full justify-evenly"
         >
           {value ? (
-            <MdOutlinePlace size={23} className="fill-bigtitle" />
+            <MdOutlinePlace size={23} className="fill-orangeboom" />
           ) : (
             <MdOutlinePlace size={23} color="gray" />
           )}

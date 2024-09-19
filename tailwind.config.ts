@@ -15,6 +15,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        orangeboom: "#FF8343",
         textblue: "#20415B",
         bigtitle: "#176B87",
         background: "hsl(var(--background))",
