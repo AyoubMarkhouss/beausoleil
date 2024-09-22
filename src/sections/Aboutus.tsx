@@ -1,18 +1,31 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
+import { motion } from "framer-motion";
 export const Aboutus = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   return (
     <div className="mx-auto px-6 py-16 md:px-24 lg:px-20 lg:py-10">
-      <div className="mb-10 flex flex-col gap-3 md:mb-12">
-        <h2 className="cabinet text-4xl text-bigtitle sm:text-5xl">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : ""}
+        transition={{
+          duration: 0.8,
+          delay: 0.3,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="mb-10 flex flex-col gap-3 md:mb-12"
+      >
+        <motion.h2 className="cabinet text-4xl text-bigtitle sm:text-5xl">
           Your Journey, Our Priority
-        </h2>
-        <p className="max-w-2xl text-base text-gray-500 md:text-xl">
+        </motion.h2>
+        <motion.p className="max-w-2xl text-base text-gray-500 md:text-xl">
           We offer safe and reliable bus travel for every journey. Wherever
           you&apos;re headed, we&apos;re here to make the trip smooth and
           enjoyable.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="grid grid-cols-2 gap-5">
           <img
@@ -32,8 +45,8 @@ export const Aboutus = () => {
           />
         </div>
         <div className="flex flex-col justify-center gap-6">
-          <div className="border-orangeboom mb-4 border-b pb-4">
-            <h6 className="cabinet mb-2 text-xl">
+          <div className="mb-4 border-b pb-4">
+            <h6 className="cabinet mb-2 text-xl text-bigtitle">
               Sit error voluptatem accusantium
             </h6>
             <p className="text-sm text-gray-900">
@@ -41,8 +54,8 @@ export const Aboutus = () => {
               des lynam alpha trion zap rowsdower, omar sharif old.
             </p>
           </div>
-          <div className="border-orangeboom mb-4 border-b pb-4">
-            <h6 className="cabinet mb-2 text-xl">
+          <div className="mb-4 border-b pb-4">
+            <h6 className="cabinet mb-2 text-xl text-bigtitle">
               Cheese on toast airedale the big cheese
             </h6>
             <p className="text-sm text-gray-900">
@@ -51,8 +64,8 @@ export const Aboutus = () => {
               today. I could pee on this if I had the energy.
             </p>
           </div>
-          <div className="border-orangeboom mb-4 border-b pb-4">
-            <h6 className="cabinet mb-2 text-xl">
+          <div className="mb-4 border-b pb-4">
+            <h6 className="cabinet mb-2 text-xl text-bigtitle">
               A flower in my garden, a mystery
             </h6>
             <p className="text-sm text-gray-900">

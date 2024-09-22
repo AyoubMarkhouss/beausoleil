@@ -5,6 +5,7 @@ import Homepage from "@/sections/Homepage";
 import Places from "@/sections/Places";
 import { Footer } from "@/components/Footer";
 import { Aboutus } from "@/sections/Aboutus";
+import Testimonials from "@/sections/Testimonials";
 
 export default function Home() {
   const hello = api.post.hello.useQuery({ text: "from tRPC" });
@@ -19,6 +20,7 @@ export default function Home() {
       <Homepage />
       <Places/>
       <Aboutus/> 
+      <Testimonials/>
       <Footer/>
     </>
   );
