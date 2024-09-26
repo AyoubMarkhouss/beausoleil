@@ -31,13 +31,16 @@ const Homepage = () => {
         <h1 className="cabinet absolute text-center text-4xl text-white md:text-5xl lg:text-6xl">
           Find cheap tickets for your next trip
         </h1>
-        <Image
-          alt="banner"
-          src="/Images/Banner.jpg"
-          height={2500}
-          width={2500}
-          className="h-full object-cover"
-        />
+        <div className="-z-20 h-full object-cover relative">
+          <Image
+            alt="banner"
+            src="/Images/Banner.jpg"
+            height={2500}
+            width={2500}
+            className="h-full object-cover"
+          />
+          <div className="bg-black/20 w-screen top-0 left-0 absolute h-full"></div>
+        </div>
       </div>
       <div className="-mt-20 px-5 md:-mt-20 md:px-10 lg:-mt-10 lg:px-20">
         <div className="grid grid-cols-2 shadow-xl lg:grid-cols-5">
@@ -81,7 +84,7 @@ const Homepage = () => {
             </div>
           </div>
 
-          <Button className="cabinet group col-span-2 flex h-24 w-full items-center justify-center bg-bigtitle text-lg text-white hover:bg-textblue lg:col-span-1">
+          <Button className="cabinet group col-span-2 flex h-24 w-full items-center justify-center rounded-r-lg bg-bigtitle text-lg text-white hover:bg-textblue lg:col-span-1">
             <FaSearch size={20} className="mr-5 group-hover:fill-orangeboom" />
             Search
           </Button>

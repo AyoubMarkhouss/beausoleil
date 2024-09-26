@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import HamburgerIcon from "@/components/HamburgerIcon";
 import { FaBus } from "react-icons/fa";
+import { Languages } from "./ui/languages";
 
 const Navigationbar = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState<boolean>(false);
@@ -21,7 +22,7 @@ const Navigationbar = () => {
             <li>
               <Link
                 href="/"
-                className="cabinet hover:text-orangeboom flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125"
+                className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
               >
                 Home
               </Link>
@@ -29,7 +30,7 @@ const Navigationbar = () => {
             <li>
               <Link
                 href="/"
-                className="cabinet hover:text-orangeboom flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125"
+                className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
               >
                 Travel
               </Link>
@@ -37,21 +38,15 @@ const Navigationbar = () => {
             <li>
               <Link
                 href="/"
-                className="cabinet hover:text-orangeboom flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125"
+                className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
               >
                 Places
               </Link>
             </li>
-            <li>
-              <Link
-                href="/"
-                className="cabinet hover:text-orangeboom flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125"
-              >
-                Contact
-              </Link>
-            </li>
+           
           </ul>
         </div>
+        
         <div className="container lg:hidden">
           <HamburgerIcon
             isOpen={hamburgerOpen}
