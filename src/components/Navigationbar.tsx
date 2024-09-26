@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import HamburgerIcon from "@/components/HamburgerIcon";
 import { FaBus } from "react-icons/fa";
 import { Languages } from "./ui/languages";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { Button } from "./ui/button";
 
 const Navigationbar = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState<boolean>(false);
@@ -22,7 +24,7 @@ const Navigationbar = () => {
             <li>
               <Link
                 href="/"
-                className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
+                className="cabinet flex transform cursor-pointer items-center gap-x-3 text-lg transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
               >
                 Home
               </Link>
@@ -30,23 +32,26 @@ const Navigationbar = () => {
             <li>
               <Link
                 href="/"
-                className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
+                className="cabinet flex transform cursor-pointer items-center gap-x-3 text-lg transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
               >
-                Travel
+                Language
               </Link>
             </li>
             <li>
-              <Link
-                href="/"
-                className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
-              >
-                Places
-              </Link>
+              <SignedOut>
+                <SignInButton>
+                  <a className="cabinet flex transform cursor-pointer items-center gap-x-3 text-lg transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom">
+                    Sign in
+                  </a>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </li>
-           
           </ul>
         </div>
-        
+
         <div className="container lg:hidden">
           <HamburgerIcon
             isOpen={hamburgerOpen}
@@ -56,9 +61,16 @@ const Navigationbar = () => {
           <nav className={hamburgerOpen ? "showMenuNav" : "hideMenuNav"}>
             <ul>
               <li>
-                <Link href="/" className="cabinet text-3xl">
-                  Home
-                </Link>
+                <SignedOut>
+                  <SignInButton>
+                    <a className="cabinet flex transform cursor-pointer items-center gap-x-3 text-3xl transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom">
+                      Sign in
+                    </a>
+                  </SignInButton>
+                </SignedOut>
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
               </li>
               <li>
                 <Link href="/" className="cabinet text-3xl">
