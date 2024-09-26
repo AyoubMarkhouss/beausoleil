@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 function Testimonials() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
