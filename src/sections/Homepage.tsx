@@ -10,6 +10,7 @@ import { useState } from "react";
 import { IoPersonOutline } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 import { Datereturn } from "@/components/ui/datereturn";
+import Link from "next/link";
 
 const Homepage = () => {
   const [passengers, setPassengers] = useState(1);
@@ -86,7 +87,7 @@ const Homepage = () => {
               </button> */}
             </div>
           </div>
-          <a href="/results">
+          <Link href="/results">
             <Button className="cabinet group col-span-2 flex h-24 w-full items-center justify-center rounded-r-lg bg-bigtitle text-lg text-white hover:bg-textblue lg:col-span-1">
               <FaSearch
                 size={20}
@@ -94,7 +95,7 @@ const Homepage = () => {
               />
               Search
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

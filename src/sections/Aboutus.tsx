@@ -12,10 +12,10 @@ export const Aboutus = () => {
             <p className="text-base text-gray-700 md:text-lg">
               At Beausoleil, we&apos;re dedicated to making your bus travel
               experience seamless and enjoyable. Our modern fleet and friendly
-              team ensure comfort and safety on every journey. Whether you're
-              commuting or exploring new destinations, we&apos;re here to
-              connect you with your next adventure. Thank you for choosing
-              Beausoleil as your travel partner!
+              team ensure comfort and safety on every journey. Whether
+              you&apos;re commuting or exploring new destinations, we&apos;re
+              here to connect you with your next adventure. Thank you for
+              choosing Beausoleil as your travel partner!
             </p>
           </div>
         </div>

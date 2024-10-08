@@ -10,27 +10,27 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaLocationDot } from "react-icons/fa6";
 
 const Contact: React.FC = () => {
-  const form = useRef(null);
-  const sendmail = (e: any) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_xtumf3n",
-        "template_371wdj8",
-        form.current ?? "",
-        "o5b6L4O0hbKhXDtfE",
-      )
+  // const form = useRef(null);
+  // const sendmail = (e: any) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       "service_xtumf3n",
+  //       "template_371wdj8",
+  //       form.current ?? "",
+  //       "o5b6L4O0hbKhXDtfE",
+  //     )
 
-      .then(
-        () => {
-          toast.success("message envoyé!");
-        },
-        () => {
-          toast.error("Quelque chose ne va pas :(");
-        },
-      );
-    e.target.reset();
-  };
+  //     .then(
+  //       () => {
+  //         toast.success("message envoyé!");
+  //       },
+  //       () => {
+  //         toast.error("Quelque chose ne va pas :(");
+  //       },
+  //     );
+  //   e.target.reset();
+  // };
   return (
     <>
       <Navigationbar />
@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
             <div className="z-30 m-5 mt-32 lg:mx-6 lg:w-1/2">
               <div className="mx-auto w-full overflow-hidden rounded-3xl p-3 md:px-8 md:py-10 lg:max-w-xl">
                 <div className="mt-3">
-                  <form className="text-white" ref={form} onSubmit={sendmail}>
+                  <form className="text-white" >
                     <div className="grid gap-4 md:grid-cols-2">
                       <div className="">
                         <label>Full name</label>
