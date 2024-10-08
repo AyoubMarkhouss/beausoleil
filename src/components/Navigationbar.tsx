@@ -46,14 +46,14 @@ const Navigationbar = ({ className }: { className?: string }) => {
                   Tariffs
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/"
                   className="cabinet flex transform cursor-pointer items-center gap-x-3 text-lg transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom"
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/contact"
@@ -76,8 +76,8 @@ const Navigationbar = ({ className }: { className?: string }) => {
               </li>
               <li>
                 <SignedOut>
-                  <SignInButton>
-                    <a className="cabinet flex transform cursor-pointer items-center gap-x-3 text-lg transition-transform duration-500 ease-in-out hover:scale-125 hover:text-orangeboom">
+                  <SignInButton >
+                    <a className="cabinet flex transform cursor-pointer items-center gap-x-3 text-lg transition-transform duration-500 ease-in-out hover:scale-125 text-white bg-orangeboom px-5 rounded-full">
                       Sign in
                     </a>
                   </SignInButton>
