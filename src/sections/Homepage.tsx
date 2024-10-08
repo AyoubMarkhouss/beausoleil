@@ -87,8 +87,8 @@ const Homepage = () => {
               </button> */}
             </div>
           </div>
-          <Link href="/results">
-            <Button className="cabinet group col-span-2 flex h-24 w-full items-center justify-center rounded-r-lg bg-bigtitle text-lg text-white hover:bg-textblue lg:col-span-1">
+          <Link href="/results" className="col-span-2 lg:col-span-1">
+            <Button className="cabinet group flex h-24 w-full items-center justify-center rounded-r-lg bg-bigtitle text-lg text-white hover:bg-textblue">
               <FaSearch
                 size={20}
                 className="mr-5 group-hover:fill-orangeboom"

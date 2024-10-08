@@ -3,13 +3,13 @@ import { IoTicketOutline } from "react-icons/io5";
 
 const CTABookticket = () => {
   return (
-    <section className="my-14 bg-textblue py-6">
-      <div className="mx-10 flex flex-col items-center justify-center space-y-8 p-4  md:p-10 lg:flex-row lg:justify-between lg:space-y-0">
+    <section className="md:my-14 bg-textblue py-6 mb-10 md:mb-14 md:px-10">
+      <div className="flex flex-col items-center justify-center space-y-8 p-4  md:p-10 lg:flex-row lg:justify-between lg:space-y-0">
         <div className="flex flex-col gap-3">
-          <h1 className="cabinet flex gap-2 text-center text-5xl text-white lg:text-left">
+          <h1 className="cabinet flex gap-2 text-start text-4xl md:text-5xl text-white lg:text-left">
             Travel in Comfort
           </h1>
-          <p className="text-xl text-gray-400">
+          <p className="text-lg md:text-xl text-gray-400">
             Enjoy a smooth and scenic ride to your destination. Book your ticket
             and travel in style!
           </p>

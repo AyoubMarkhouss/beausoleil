@@ -2,7 +2,7 @@ import React from "react";
 
 export const Aboutus = () => {
   return (
-    <div className="mx-auto px-4 pb-20 pt-10 sm:max-w-xl md:max-w-full md:px-24 lg:px-20">
+    <div className="mx-auto px-5 pb-20 pt-10 sm:max-w-xl md:max-w-full md:px-24 lg:px-20">
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center lg:max-w-lg">
           <div className="flex flex-col gap-3">

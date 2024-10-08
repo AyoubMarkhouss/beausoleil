@@ -45,8 +45,8 @@ function Testimonials() {
   };
 
   return (
-    <div className="bg-textblue py-20 md:mt-20">
-      <div className="mx-10 lg:mx-20">
+    <div className="bg-textblue py-10 md:py-20 md:mt-20">
+      <div className="mx-7 lg:mx-20">
         <div className="mb-10 flex flex-col gap-3 md:mb-12">
           <h2 className="cabinet text-4xl text-white sm:text-5xl">
             What Our Travelers Say

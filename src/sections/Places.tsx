@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import { LuMapPin } from "react-icons/lu";
@@ -9,8 +9,6 @@ import { MdAccessTime } from "react-icons/md";
 import { TbBus } from "react-icons/tb";
 
 const Places = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
   return (
     <div className="px-6 pt-5 lg:px-20">
       <div className="flex flex-col gap-3">
@@ -24,18 +22,8 @@ const Places = () => {
       </div>
       <div className="justify-center pt-10">
         <div className="grid w-full gap-x-5 md:grid-cols-2 lg:grid-cols-4">
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : ""}
-            transition={{
-              duration: 0.5,
-              delay: 0.3,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10"
-          >
-            <motion.div className="z-40 w-full pb-2 lg:w-full">
+          <div className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10">
+            <div className="z-40 w-full pb-2 lg:w-full">
               <Image
                 className="h-64 w-full rounded-xl shadow-gray-300 lg:w-full"
                 alt="zz"
@@ -43,8 +31,8 @@ const Places = () => {
                 width={2000}
                 height={2000}
               />
-            </motion.div>
-            <motion.div className="z-0 -mt-10 rounded-2xl border p-3 pt-10 shadow-lg">
+            </div>
+            <div className="z-0 -mt-10 rounded-2xl border p-3 pt-10 shadow-lg">
               <h1 className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-105">
                 Taroudant
                 <CgArrowLongRightR size={20} className="text-orangeboom" />
@@ -64,20 +52,10 @@ const Places = () => {
               </p>
 
               <p className="cabinet flex justify-end text-lg">320 Dhs</p>
-            </motion.div>
-          </motion.div>{" "}
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : ""}
-            transition={{
-              duration: 0.5,
-              delay: 0.6,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10"
-          >
-            <motion.div className="z-40 w-full pb-2 lg:w-full">
+            </div>
+          </div>{" "}
+          <div className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10">
+            <div className="z-40 w-full pb-2 lg:w-full">
               <Image
                 className="h-64 w-full rounded-xl shadow-gray-300 lg:w-full"
                 alt="zz"
@@ -85,8 +63,8 @@ const Places = () => {
                 width={2000}
                 height={2000}
               />
-            </motion.div>
-            <motion.div className="z-0 -mt-10 rounded-2xl border p-3 pt-10 shadow-lg">
+            </div>
+            <div className="z-0 -mt-10 rounded-2xl border p-3 pt-10 shadow-lg">
               <h1 className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-105">
                 Casablanca
                 <CgArrowLongRightR size={20} className="text-orangeboom" />
@@ -106,20 +84,10 @@ const Places = () => {
               </p>
 
               <p className="cabinet flex justify-end text-lg">320 Dhs</p>
-            </motion.div>
-          </motion.div>{" "}
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : ""}
-            transition={{
-              duration: 0.5,
-              delay: 0.9,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10"
-          >
-            <motion.div className="z-40 w-full pb-2 lg:w-full">
+            </div>
+          </div>{" "}
+          <div className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10">
+            <div className="z-40 w-full pb-2 lg:w-full">
               <Image
                 className="h-64 w-full rounded-xl shadow-gray-300 lg:w-full"
                 alt="zz"
@@ -127,8 +95,8 @@ const Places = () => {
                 width={2000}
                 height={2000}
               />
-            </motion.div>
-            <motion.div className="z-0 -mt-10 rounded-2xl border p-3 pt-10 shadow-lg">
+            </div>
+            <div className="z-0 -mt-10 rounded-2xl border p-3 pt-10 shadow-lg">
               <h1 className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-105">
                 Oujda
                 <CgArrowLongRightR size={20} className="text-orangeboom" />
@@ -148,20 +116,10 @@ const Places = () => {
               </p>
 
               <p className="cabinet flex justify-end text-lg">320 Dhs</p>
-            </motion.div>
-          </motion.div>{" "}
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : ""}
-            transition={{
-              duration: 0.5,
-              delay: 1.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10"
-          >
-            <motion.div className="z-40 w-full pb-2 lg:w-full">
+            </div>
+          </div>{" "}
+          <div className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10">
+            <div className="z-40 w-full pb-2 lg:w-full">
               <Image
                 className="h-64 w-full rounded-xl shadow-gray-300 lg:w-full"
                 alt="zz"
@@ -169,8 +127,8 @@ const Places = () => {
                 width={2000}
                 height={2000}
               />
-            </motion.div>
-            <motion.div className="z-0 -mt-10 rounded-2xl border p-3 pt-10 shadow-lg">
+            </div>
+            <div className="z-0 -mt-10 rounded-2xl border p-3 pt-10 shadow-lg">
               <h1 className="cabinet flex transform cursor-pointer items-center gap-x-3 text-xl transition-transform duration-500 ease-in-out hover:scale-105">
                 Marrakech
                 <CgArrowLongRightR size={20} className="text-orangeboom" />
@@ -190,8 +148,8 @@ const Places = () => {
               </p>
 
               <p className="cabinet flex justify-end text-lg">320 Dhs</p>
-            </motion.div>
-          </motion.div>{" "}
+            </div>
+          </div>{" "}
         </div>
       </div>
     </div>
