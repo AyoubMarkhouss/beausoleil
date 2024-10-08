@@ -1,78 +1,43 @@
-import React, { useRef } from "react";
-import { useInView } from "framer-motion";
-import { motion } from "framer-motion";
+import React from "react";
+
 export const Aboutus = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
   return (
-    <div className="mx-auto px-6 py-16 md:px-24 lg:px-20 lg:py-10">
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : ""}
-        transition={{
-          duration: 0.8,
-          delay: 0.3,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
-        className="mb-10 flex flex-col gap-3 md:mb-12"
-      >
-        <motion.h2 className="cabinet text-4xl text-bigtitle sm:text-5xl">
-          Your Journey, Our Priority
-        </motion.h2>
-        <motion.p className="max-w-2xl text-base text-gray-500 md:text-xl">
-          We offer safe and reliable bus travel for every journey. Wherever
-          you&apos;re headed, we&apos;re here to make the trip smooth and
-          enjoyable.
-        </motion.p>
-      </motion.div>
-      <div className="grid gap-8 lg:grid-cols-2">
-        <div className="grid grid-cols-2 gap-5">
-          <img
-            className="col-span-2 h-56 w-full rounded object-cover shadow-lg"
-            src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            alt=""
-          />
-          <img
-            className="h-48 w-full rounded object-cover shadow-lg"
-            src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            alt=""
-          />
-          <img
-            className="h-48 w-full rounded object-cover shadow-lg"
-            src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            alt=""
-          />
+    <div className="mx-auto px-4 pb-20 pt-10 sm:max-w-xl md:max-w-full md:px-24 lg:px-20">
+      <div className="grid gap-10 lg:grid-cols-2">
+        <div className="flex flex-col justify-center lg:max-w-lg">
+          <div className="flex flex-col gap-3">
+            <h2 className="cabinet text-4xl text-bigtitle sm:text-5xl">
+              Beausoleil Your Travel Companion
+            </h2>
+            <p className="text-base text-gray-700 md:text-lg">
+              At Beausoleil, we&apos;re dedicated to making your bus travel
+              experience seamless and enjoyable. Our modern fleet and friendly
+              team ensure comfort and safety on every journey. Whether you're
+              commuting or exploring new destinations, we&apos;re here to
+              connect you with your next adventure. Thank you for choosing
+              Beausoleil as your travel partner!
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col justify-center gap-6">
-          <div className="mb-4 border-b pb-4">
-            <h6 className="cabinet mb-2 text-xl text-bigtitle">
-              Sit error voluptatem accusantium
-            </h6>
-            <p className="text-sm text-gray-900">
-              Sportacus andrew weatherall goose Refined gentlemen super mario
-              des lynam alpha trion zap rowsdower, omar sharif old.
-            </p>
+        <div className="-mx-4 flex items-center justify-center lg:pl-8">
+          <div className="flex flex-col items-end px-3">
+            <img
+              className="mb-6 h-28 w-28 rounded object-cover shadow-lg sm:h-48 sm:w-48 xl:h-56 xl:w-56"
+              src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              alt=""
+            />
+            <img
+              className="h-20 w-20 rounded object-cover shadow-lg sm:h-32 sm:w-32 xl:h-40 xl:w-40"
+              src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              alt=""
+            />
           </div>
-          <div className="mb-4 border-b pb-4">
-            <h6 className="cabinet mb-2 text-xl text-bigtitle">
-              Cheese on toast airedale the big cheese
-            </h6>
-            <p className="text-sm text-gray-900">
-              Chase ball of string eat plants, meow, and throw up because I ate
-              plants going to catch the red dot today going to catch the red dot
-              today. I could pee on this if I had the energy.
-            </p>
-          </div>
-          <div className="mb-4 border-b pb-4">
-            <h6 className="cabinet mb-2 text-xl text-bigtitle">
-              A flower in my garden, a mystery
-            </h6>
-            <p className="text-sm text-gray-900">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae doloremque laudantium.
-            </p>
+          <div className="px-3">
+            <img
+              className="h-40 w-40 rounded object-cover shadow-lg sm:h-64 sm:w-64 xl:h-80 xl:w-80"
+              src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+              alt=""
+            />
           </div>
         </div>
       </div>

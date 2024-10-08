@@ -4,20 +4,21 @@ import { LuMapPin } from "react-icons/lu";
 import { FaRegStar } from "react-icons/fa";
 import { CgArrowLongRightR } from "react-icons/cg";
 import { MdAccessTime } from "react-icons/md";
+import { TbBus } from "react-icons/tb";
 
 const Places = () => {
   return (
-    <div className="px-6 lg:px-20">
+    <div className="px-6 lg:px-20 pt-5">
       <div className="flex flex-col gap-3">
-        <h1 className="cabinet text-4xl text-bigtitle md:text-5xl">
-          Top travel packages this month
+        <h1 className="cabinet flex gap-2 text-4xl text-bigtitle md:text-5xl">
+           Top travel packages this month
         </h1>
         <p className="max-w-2xl text-gray-500 md:text-xl">
           Discover our best travel deals this month. Explore exciting
           destinations at unbeatable prices, perfect for your next adventure.
         </p>
       </div>
-      <div className="justify-center py-10">
+      <div className="justify-center pt-10">
         <div className="grid w-full gap-x-5 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex transform cursor-pointer flex-col justify-center gap-2 pb-10 transition-transform duration-500 ease-in-out hover:scale-105">
             <div className="z-40 w-full pb-2 lg:w-full">

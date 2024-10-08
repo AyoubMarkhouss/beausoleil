@@ -7,8 +7,6 @@ import { FaStar } from "react-icons/fa";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 function Testimonials() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
   const settings = {
     dots: true,
     infinite: true,
@@ -49,30 +47,17 @@ function Testimonials() {
   return (
     <div className="bg-textblue py-20 md:mt-20">
       <div className="mx-10 lg:mx-20">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : ""}
-          transition={{
-            duration: 0.8,
-            delay: 0.3,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-          className="mb-10 flex flex-col gap-3 md:mb-12"
-        >
-          <motion.h2 className="cabinet text-4xl text-white sm:text-5xl">
+        <div className="mb-10 flex flex-col gap-3 md:mb-12">
+          <h2 className="cabinet text-4xl text-white sm:text-5xl">
             What Our Travelers Say
-          </motion.h2>
-          <motion.p className="max-w-2xl text-base text-gray-400 md:text-xl">
+          </h2>
+          <p className="max-w-2xl text-base text-gray-400 md:text-xl">
             See what our travelers have to say about their experiences. Their
             feedback drives us to keep delivering great service.
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
         <Slider {...settings}>
-          <div
-            
-            className="px-5"
-          >
+          <div className="px-5">
             <div className="flex max-w-sm flex-col rounded-2xl shadow-lg shadow-slate-700">
               <div className="h-60 rounded-t-xl bg-white px-4 sm:px-8">
                 <p className="poppins text-md relative py-7 text-center italic">
@@ -118,10 +103,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div
-           
-            className="px-5"
-          >
+          <div className="px-5">
             <div className="flex max-w-sm flex-col rounded-2xl shadow-lg shadow-slate-700">
               <div className="h-60 rounded-t-xl bg-white px-4 sm:px-8">
                 <p className="poppins text-md relative py-7 text-center italic">
@@ -167,10 +149,7 @@ function Testimonials() {
               </div>
             </div>
           </div>
-          <div
-            
-            className="px-5"
-          >
+          <div className="px-5">
             <div className="flex max-w-sm flex-col rounded-2xl shadow-lg shadow-slate-700">
               <div className="h-60 rounded-t-xl bg-white px-4 sm:px-8">
                 <p className="poppins text-md relative py-7 text-center italic">
