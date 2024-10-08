@@ -45,7 +45,7 @@ export const Services = () => {
             animate={isInView ? { opacity: 1, scale: 1 } : ""}
             transition={{
               duration: 0.8,
-              delay: 0.4,
+              delay: 0.3,
               ease: [0, 0.71, 0.2, 1.01],
             }}
             className="mb-4 border-b pb-4"
@@ -71,7 +71,7 @@ export const Services = () => {
             animate={isInView ? { opacity: 1, scale: 1 } : ""}
             transition={{
               duration: 0.8,
-              delay: 0.8,
+              delay: 0.6,
               ease: [0, 0.71, 0.2, 1.01],
             }}
             className="mb-4 border-b pb-4"
@@ -97,7 +97,7 @@ export const Services = () => {
             animate={isInView ? { opacity: 1, scale: 1 } : ""}
             transition={{
               duration: 0.8,
-              delay: 1.2,
+              delay: 0.9,
               ease: [0, 0.71, 0.2, 1.01],
             }}
             className="mb-4 border-b pb-4"
